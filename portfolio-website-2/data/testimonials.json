@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "type": "adplist",
+        "rating": 5,
+        "text": "I had an <strong>outstanding experience</strong> with my mentor, who excelled in communication, motivation, subject knowledge, and problem-solving. Their ability to provide clear guidance and inspire me made a <strong>significant impact</strong> on my growth. I highly recommend booking a session with them if you're looking for someone who will <strong>exceed your expectations</strong>.",
+        "name": "Hossam El-kharbotly",
+        "country": "🇪🇬",
+        "role": "Computer Engineer, Free",
+        "date": "November 19, 2025",
+        "dateSort": "2025-11-19",
+        "badges": [
+            "Technically competent",
+            "Very motivational",
+            "Amazing communicator",
+            "Amazing problem solver"
+        ],
+        "avatar": "https://adplist-bucket.s3.amazonaws.com/media/profile_photos/562580f36b354f93a057e5500f783616SN3fr.webp"
+    },
+    {
+        "id": "2",
+        "type": "adplist",
+        "rating": 5,
+        "text": "Yahya was <strong>incredibly generous</strong> with his time, gave me <strong>great advice</strong>, a lot of resources to learn from, and gave me a lot of encouragement. I can't recommend him enough!",
+        "name": "Mentee",
+        "country": "",
+        "role": "Mentee",
+        "date": "November 15, 2025",
+        "dateSort": "2025-11-15",
+        "badges": [
+            "Technically competent",
+            "Very motivational"
+        ],
+        "avatar": "/diverse-avatars.png"
+    },
+    {
+        "id": "3",
+        "type": "topmate",
+        "rating": 5,
+        "text": "Eng. Yahya gave me an <strong>incredible</strong> mock interview session that was very helpful. He asked both behavior and technical questions, like a real interview, and provided clear and <strong>valuable advice</strong>. At the end of the session, he gave me detailed document covering everything I need to review and focus on for both technical and behavioral areas. This <strong>extra effort</strong> boosted my confidence and helped me feel fully prepared. It was an amazing session!",
+        "name": "Moataz Habib",
+        "date": "12th Dec, 2024",
+        "dateSort": "2024-12-12",
+        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=MH&backgroundColor=3b82f6"
+    },
+    {
+        "id": "4",
+        "type": "topmate",
+        "rating": 5,
+        "text": "I had a <strong>fantastic session</strong> with Yahya. He provided <strong>invaluable advice</strong> on transitioning to an ML career, including specific book and tool recommendations. The session <strong>exceeded my expectations</strong> and left me feeling motivated and prepared. I'm truly grateful for his expertise.",
+        "name": "Adama Sorho",
+        "date": "11th Dec, 2024",
+        "dateSort": "2024-12-11",
+        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=AS&backgroundColor=3b82f6"
+    },
+    {
+        "id": "5",
+        "type": "topmate",
+        "rating": 5,
+        "text": "I recently had another review of my CV with Yahya, and his input was <strong>invaluable</strong>. He thoroughly tested the previous edits, offering <strong>practical advice</strong> and encouraging me to refine specific areas further. Mossab's attention to detail and friendly, <strong>constructive approach</strong> made all the difference, and I feel that my CV is now polished and ready to make an impact. I really appreciate his time and expertise!",
+        "name": "Ahmed Mahmoud",
+        "date": "3rd Nov, 2024",
+        "dateSort": "2024-11-03",
+        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=AM&backgroundColor=3b82f6"
+    }
+]

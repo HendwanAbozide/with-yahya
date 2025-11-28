@@ -25,9 +25,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen ? "glass" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen ? "glass" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -35,44 +34,38 @@ export function Header() {
             onClick={() => scrollToSection("hero")}
             className="text-xl font-semibold text-foreground hover:text-accent transition-colors"
           >
-            Mentorship
+            Yahya Alaa
           </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("services")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-foreground after:transition-all hover:after:w-full"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("who-this-is-for")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-foreground after:transition-all hover:after:w-full"
             >
               Who This Is For
             </button>
             <button
-              onClick={() => scrollToSection("why-i-mentor")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => scrollToSection("experience")}
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-foreground after:transition-all hover:after:w-full"
             >
-              About
+              Experience
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-foreground after:transition-all hover:after:w-full"
             >
               Testimonials
             </button>
             <button
-              onClick={() => scrollToSection("publications")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Publications
-            </button>
-            <button
               onClick={() => scrollToSection("faq")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-foreground after:transition-all hover:after:w-full"
             >
               FAQ
             </button>
@@ -100,22 +93,16 @@ export function Header() {
               Who This Is For
             </button>
             <button
-              onClick={() => scrollToSection("why-i-mentor")}
+              onClick={() => scrollToSection("experience")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
             >
-              About
+              Experience
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
             >
               Testimonials
-            </button>
-            <button
-              onClick={() => scrollToSection("publications")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors text-left"
-            >
-              Publications
             </button>
             <button
               onClick={() => scrollToSection("faq")}

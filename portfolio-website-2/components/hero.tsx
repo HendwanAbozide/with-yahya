@@ -82,13 +82,19 @@ export function Hero() {
           </div>
 
           <div className="relative flex justify-center items-center order-1 md:order-2 text-primary">
-            {/* replaced geometric background with circular dashed frame style */}
-            <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] flex items-center justify-center">
-              {/* Dashed Ring */}
-              <div className="absolute inset-0 rounded-full border-[3px] border-dashed border-sky-300 text-primary" />
+            {/* Profile picture with rotating dashed ring */}
+            <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] flex items-center justify-center group" style={{ perspective: '1200px' }}>
+              {/* Rotating dashed ring - vertical flip */}
+              <div
+                className="absolute inset-0 rounded-full border-[3px] border-dashed border-sky-300"
+                style={{
+                  animation: 'flipVertical 8s linear infinite',
+                  transformStyle: 'preserve-3d'
+                }}
+              />
 
               {/* Image Container */}
-              <div className="absolute inset-4 md:inset-6 rounded-full overflow-hidden border-[6px] border-white shadow-lg bg-white">
+              <div className="absolute inset-4 md:inset-6 rounded-full overflow-hidden border-[6px] border-white shadow-lg bg-white group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300">
                 <Image src="/images/profile-outdoors.jpg" alt="Yahya Alaa" fill className="object-cover" priority />
               </div>
             </div>
