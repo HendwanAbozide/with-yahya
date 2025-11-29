@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   },
 }
 
+import { BackgroundGradient } from "@/components/background-gradient"
+
+// ... (imports)
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,6 +58,7 @@ export default function RootLayout({
           </defs>
         </svg>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+          <BackgroundGradient />
           {children}
           <Analytics />
         </ThemeProvider>

@@ -76,7 +76,7 @@ export function Testimonials() {
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="break-inside-avoid mb-6">
-              <Card className="glass transition-all duration-300 hover:border-accent/60 hover:border-2 h-full relative">
+              <Card className="glass transition-all duration-300 h-full relative">
                 {testimonial.isRecent && (
                   <div className="absolute top-3 right-3">
                     <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500 text-white shadow-sm">

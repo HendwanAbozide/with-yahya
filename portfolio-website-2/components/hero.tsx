@@ -24,7 +24,6 @@ export function Hero() {
               </h2>
 
               <div className="space-y-4 pt-4">
-                <p className="text-base font-medium text-foreground/80">Book Free Mentorship</p>
                 <div className="flex flex-col gap-3 items-start">
                   <Button
                     asChild
@@ -54,7 +53,7 @@ export function Hero() {
 
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/yahya-alaa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-700 hover:text-primary transition-colors"
@@ -63,16 +62,7 @@ export function Hero() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-700 hover:text-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contact@example.com"
+                href="mailto:yahya.alaa.massoud@gmail.com"
                 className="text-neutral-700 hover:text-primary transition-colors"
                 aria-label="Email"
               >
