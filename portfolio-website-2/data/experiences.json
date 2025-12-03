@@ -1,0 +1,32 @@
+[
+    {
+        "company": "Shopify",
+        "role": "Senior ML Engineer",
+        "logo": "/images/shopify-logo.png"
+    },
+    {
+        "company": "Tempo Analytics",
+        "role": "ML Engineer",
+        "logo": "/images/tempo-logo.png"
+    },
+    {
+        "company": "VRapeutic",
+        "role": "Technical Lead & Co-founder",
+        "logo": "/images/vrapeutic-logo.png"
+    },
+    {
+        "company": "SensorCortek",
+        "role": "ML Engineer",
+        "logo": "/images/sensorcortek-logo.png"
+    },
+    {
+        "company": "VIVA Lab",
+        "role": "AI Researcher",
+        "logo": "/images/vivalab-logo.png"
+    },
+    {
+        "company": "Intelligent Systems Lab",
+        "role": "ML Engineer",
+        "logo": "/images/isl-logo.png"
+    }
+]

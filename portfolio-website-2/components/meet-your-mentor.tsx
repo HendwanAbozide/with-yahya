@@ -1,101 +1,41 @@
 "use client"
 
+import { useState, useEffect, useRef } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FileText, GraduationCap, Briefcase } from "lucide-react"
+import { FileText, GraduationCap, Briefcase, ChevronLeft, ChevronRight } from "lucide-react"
+import experiencesData from "@/data/experiences.json"
+import publicationsData from "@/data/publications.json"
+import teachingData from "@/data/teaching.json"
 
-const experiences = [
-    {
-        company: "Shopify",
-        role: "Senior ML Engineer",
-        logo: "/images/shopify-logo.png",
-    },
-    {
-        company: "Tempo Analytics",
-        role: "ML Engineer",
-        logo: "/images/tempo-logo.png",
-    },
-    {
-        company: "VRapeutic",
-        role: "Technical Lead & Co-founder",
-        logo: "/images/vrapeutic-logo.png",
-    },
-    {
-        company: "SensorCortek",
-        role: "ML Engineer",
-        logo: "/images/sensorcortek-logo.png",
-    },
-    {
-        company: "VIVA Lab",
-        role: "AI Researcher",
-        logo: "/images/vivalab-logo.png",
-    },
-    {
-        company: "Intelligent Systems Lab",
-        role: "ML Engineer",
-        logo: "/images/isl-logo.png",
-    },
-]
-
-const publications = [
-    {
-        title: "Enhanced thermal-rgb fusion for robust object detection",
-        venue: "Software Engineering Journal",
-        year: "2024",
-        link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:9yKSN-GCB0IC",
-    },
-    {
-        title: "RGB-LiDAR fusion for accurate 2D and 3D object detection",
-        venue: "IEEE Computer Society",
-        year: "2023",
-        link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:2osOgNQ5qMEC",
-    },
-    {
-        title: "Sensor fusion for 3d object detection for autonomous vehicles",
-        venue: "ACM Queue",
-        year: "2023",
-        link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:u5HHmVD_uO8C",
-    },
-    {
-        title: "Learnable fusion mechanisms for multimodal object detection in autonomous vehicles",
-        venue: "International Conference on AI",
-        year: "2022",
-        link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:qjMakFHDy7sC",
-    },
-    {
-        title: "Sensor fusion operators for multimodal 2d object detection",
-        venue: "Journal of Systems Engineering",
-        year: "2022",
-        link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:u-x6o8ySG0sC",
-    },
-]
-
-const teaching = [
-    {
-        role: "Part-time Professor",
-        course: "Software Engineering & AI",
-        institution: "University of Ottawa",
-        year: "2023",
-        logo: "/images/uottawa-logo.png",
-    },
-    {
-        role: "Teaching Assistant",
-        course: "Computer Science Courses",
-        institution: "University of Ottawa",
-        year: "2018 - 2022",
-        logo: "/images/uottawa-logo.png",
-    },
-    {
-        role: "Instructor",
-        course: "Computer Vision",
-        institution: "ITI Egypt",
-        year: "2019",
-        logo: "/images/iti-logo.jpg",
-    },
-]
+const experiences = experiencesData
+const publications = publicationsData
+const teaching = teachingData
 
 export function MeetYourMentor() {
+    const [isVisible, setIsVisible] = useState(false)
+    const [activeIndex, setActiveIndex] = useState(0)
+    const sectionRef = useRef<HTMLElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true)
+                    observer.disconnect()
+                }
+            },
+            { threshold: 0.1 }
+        )
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current)
+        }
+
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <section id="meet-your-mentor" className="py-24 px-6 bg-secondary/30">
+        <section id="meet-your-mentor" ref={sectionRef} className="py-24 px-6 bg-secondary/30">
             <div className="container mx-auto max-w-6xl">
                 <div className="space-y-4 mb-12 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700 bg-clip-text text-transparent text-balance w-fit mx-auto">
@@ -141,25 +81,144 @@ export function MeetYourMentor() {
                         </div>
                     </TabsContent>
 
-                    <TabsContent value="research" className="w-full mt-0">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {publications.map((pub, index) => (
-                                <a
-                                    key={index}
-                                    href={pub.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex flex-col items-center text-center p-6 rounded-2xl glass-card transition-all duration-300 hover:-translate-y-1 group bg-card/50 border border-border/50 h-full"
-                                >
-                                    <div className="h-16 w-16 rounded-full bg-blue-50/80 flex items-center justify-center mb-4">
-                                        <FileText className="h-8 w-8" style={{ stroke: "url(#blue-gradient-icon)" }} />
+                    <TabsContent value="research" className="w-full mt-0 min-h-[400px] relative flex flex-col items-center justify-center overflow-hidden">
+                        <div
+                            className="relative w-full max-w-4xl h-[350px] flex items-center justify-center perspective-1000 cursor-grab active:cursor-grabbing"
+                            onMouseDown={(e) => {
+                                const startX = e.pageX;
+                                const handleMouseUp = (e: MouseEvent) => {
+                                    const diff = e.pageX - startX;
+                                    if (Math.abs(diff) > 50) {
+                                        if (diff > 0) {
+                                            setActiveIndex((prev) => (prev - 1 + publications.length) % publications.length);
+                                        } else {
+                                            setActiveIndex((prev) => (prev + 1) % publications.length);
+                                        }
+                                    }
+                                    window.removeEventListener('mouseup', handleMouseUp);
+                                };
+                                window.addEventListener('mouseup', handleMouseUp, { once: true });
+                            }}
+                            onTouchStart={(e) => {
+                                const startX = e.touches[0].pageX;
+                                const handleTouchEnd = (e: TouchEvent) => {
+                                    const diff = e.changedTouches[0].pageX - startX;
+                                    if (Math.abs(diff) > 50) {
+                                        if (diff > 0) {
+                                            setActiveIndex((prev) => (prev - 1 + publications.length) % publications.length);
+                                        } else {
+                                            setActiveIndex((prev) => (prev + 1) % publications.length);
+                                        }
+                                    }
+                                    window.removeEventListener('touchend', handleTouchEnd);
+                                };
+                                window.addEventListener('touchend', handleTouchEnd, { once: true });
+                            }}
+                        >
+                            {publications.map((pub, index) => {
+                                const len = publications.length;
+                                const offset = (index - activeIndex + len) % len;
+
+                                let style = {};
+                                let cardClass = "absolute w-[320px] h-[280px] transition-all duration-500 ease-in-out flex flex-col items-center text-center p-8 rounded-2xl border border-border/50 shadow-xl justify-center select-none";
+                                let isInteractive = false;
+
+                                if (offset === 0) {
+                                    // Active (Center) - Opaque and larger
+                                    style = { transform: 'translateX(0) scale(1)', zIndex: 30, opacity: 1 };
+                                    cardClass += " bg-card hover:shadow-2xl"; // Solid background
+                                    isInteractive = true;
+                                } else if (offset === 1) {
+                                    // Next (Right) - Smaller and transparent
+                                    style = { transform: 'translateX(70%) scale(0.85)', zIndex: 20, opacity: 0.5 };
+                                    cardClass += " glass-card bg-card/50";
+                                } else if (offset === len - 1) {
+                                    // Previous (Left) - Smaller and transparent
+                                    style = { transform: 'translateX(-70%) scale(0.85)', zIndex: 20, opacity: 0.5 };
+                                    cardClass += " glass-card bg-card/50";
+                                } else {
+                                    // Hidden
+                                    style = { transform: 'scale(0.8)', zIndex: 0, opacity: 0, pointerEvents: 'none' };
+                                    cardClass += " glass-card bg-card/50";
+                                }
+
+                                return (
+                                    <div
+                                        key={index}
+                                        className={cardClass}
+                                        style={style}
+                                        onClick={(e) => {
+                                            // Only allow navigation click if it wasn't a drag
+                                            // We can use a simple check or just allow the click to bubble
+                                            // For side cards, we want them to navigate
+                                            if (offset === 1) {
+                                                e.preventDefault();
+                                                setActiveIndex((prev) => (prev + 1) % len);
+                                            }
+                                            if (offset === len - 1) {
+                                                e.preventDefault();
+                                                setActiveIndex((prev) => (prev - 1 + len) % len);
+                                            }
+                                        }}
+                                    >
+                                        <a
+                                            href={isInteractive ? pub.link : undefined}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={`flex flex-col items-center w-full h-full justify-center ${!isInteractive ? 'pointer-events-none' : ''}`}
+                                            draggable="false"
+                                            onDragStart={(e) => e.preventDefault()}
+                                        >
+                                            <div className="h-14 w-14 rounded-full bg-blue-50/80 flex items-center justify-center mb-4 shrink-0">
+                                                <FileText className="h-7 w-7" style={{ stroke: "url(#blue-gradient-icon)" }} />
+                                            </div>
+                                            <h3 className="text-lg font-bold text-foreground mb-2 leading-tight line-clamp-3">{pub.title}</h3>
+                                            <p className="text-sm font-medium text-blue-600 mb-1">{pub.venue}</p>
+                                            <p className="text-sm text-muted-foreground">{pub.year}</p>
+
+                                            {isInteractive && (
+                                                <div className="mt-auto pt-2 text-xs text-muted-foreground font-medium uppercase tracking-wider">
+                                                    Click to Read Paper
+                                                </div>
+                                            )}
+                                        </a>
                                     </div>
-                                    <h3 className="text-lg font-semibold text-foreground mb-2 leading-tight min-h-[3.5rem] flex items-center justify-center">{pub.title}</h3>
-                                    <p className="text-sm text-muted-foreground leading-relaxed">
-                                        {pub.venue} • {pub.year}
-                                    </p>
-                                </a>
-                            ))}
+                                );
+                            })}
+                        </div>
+
+                        {/* Navigation Controls */}
+                        <div className="flex items-center gap-6 mt-4 z-40">
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setActiveIndex((prev) => (prev - 1 + publications.length) % publications.length);
+                                }}
+                                className="p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all hover:scale-110 active:scale-95 text-foreground"
+                                aria-label="Previous paper"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+
+                            <div className="flex gap-2">
+                                {publications.map((_, idx) => (
+                                    <div
+                                        key={idx}
+                                        className={`h-2 rounded-full transition-all duration-300 ${idx === activeIndex ? 'w-8 bg-blue-600' : 'w-2 bg-blue-200/50'}`}
+                                    />
+                                ))}
+                            </div>
+
+                            <button
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    setActiveIndex((prev) => (prev + 1) % publications.length);
+                                }}
+                                className="p-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-sm transition-all hover:scale-110 active:scale-95 text-foreground"
+                                aria-label="Next paper"
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </button>
                         </div>
                     </TabsContent>
 

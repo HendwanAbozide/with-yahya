@@ -1,38 +1,9 @@
 import { FileText } from "lucide-react"
+import publicationsData from "@/data/publications.json"
 
 export function Publications() {
-  const publications = [
-    {
-      title: "Enhanced thermal-rgb fusion for robust object detection",
-      venue: "Software Engineering Journal",
-      year: "2024",
-      link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:9yKSN-GCB0IC",
-    },
-    {
-      title: "RGB-LiDAR fusion for accurate 2D and 3D object detection",
-      venue: "IEEE Computer Society",
-      year: "2023",
-      link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:2osOgNQ5qMEC",
-    },
-    {
-      title: "Sensor fusion for 3d object detection for autonomous vehicles",
-      venue: "ACM Queue",
-      year: "2023",
-      link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:u5HHmVD_uO8C",
-    },
-    {
-      title: "Learnable fusion mechanisms for multimodal object detection in autonomous vehicles",
-      venue: "International Conference on AI",
-      year: "2022",
-      link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:qjMakFHDy7sC",
-    },
-    {
-      title: "Sensor fusion operators for multimodal 2d object detection",
-      venue: "Journal of Systems Engineering",
-      year: "2022",
-      link: "https://scholar.google.ca/citations?view_op=view_citation&hl=en&user=NxOd8yoAAAAJ&citation_for_view=NxOd8yoAAAAJ:u-x6o8ySG0sC",
-    },
-  ]
+  const publications = publicationsData
+
 
   return (
     <section id="publications" className="py-24 px-6 bg-secondary/30">

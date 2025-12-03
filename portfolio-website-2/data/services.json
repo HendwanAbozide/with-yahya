@@ -1,0 +1,27 @@
+[
+    {
+        "icon": "Target",
+        "title": "Career Direction & Roadmaps",
+        "description": "Get clarity on skills to learn, what to focus on, and what to ignore."
+    },
+    {
+        "icon": "FileText",
+        "title": "Resume Review",
+        "description": "Actionable feedback that improves your visibility and interview chances."
+    },
+    {
+        "icon": "Briefcase",
+        "title": "Portfolio & Project Guidance",
+        "description": "Learn how to choose, structure, and present impactful technical projects."
+    },
+    {
+        "icon": "Code2",
+        "title": "Machine Learning Mentorship",
+        "description": "Ask about ML fundamentals, pipelines, modeling, MLOps, and real-world workflows."
+    },
+    {
+        "icon": "MessageSquare",
+        "title": "Interview Preparation",
+        "description": "Mock interviews, feedback, and strategies to help you perform with confidence."
+    }
+]

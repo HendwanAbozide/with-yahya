@@ -1,0 +1,23 @@
+[
+    {
+        "role": "Part-time Professor",
+        "course": "Software Engineering & AI",
+        "institution": "University of Ottawa",
+        "year": "2023",
+        "logo": "/images/uottawa-logo.png"
+    },
+    {
+        "role": "Teaching Assistant",
+        "course": "Computer Science Courses",
+        "institution": "University of Ottawa",
+        "year": "2018 - 2022",
+        "logo": "/images/uottawa-logo.png"
+    },
+    {
+        "role": "Instructor",
+        "course": "Computer Vision",
+        "institution": "ITI Egypt",
+        "year": "2019",
+        "logo": "/images/iti-logo.jpg"
+    }
+]

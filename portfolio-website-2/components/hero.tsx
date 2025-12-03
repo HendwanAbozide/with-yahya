@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Linkedin, Mail, Github, Calendar, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { ADPListButton } from "@/components/adplist-button"
 
 export function Hero() {
   return (
@@ -25,16 +26,7 @@ export function Hero() {
 
               <div className="space-y-4 pt-4">
                 <div className="flex flex-col gap-3 items-start">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-[#141414] hover:bg-[#141414]/90 text-white font-semibold px-8 transition-transform hover:scale-110 active:scale-95 shadow-lg hover:shadow-xl"
-                  >
-                    <a href="https://adplist.org/mentors/yahya-alaa" target="_blank" rel="noopener noreferrer">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Book on ADPList
-                    </a>
-                  </Button>
+                  <ADPListButton />
                   <p className="text-sm text-muted-foreground">
                     Also available on{" "}
                     <a
