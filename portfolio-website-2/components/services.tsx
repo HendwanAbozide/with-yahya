@@ -61,7 +61,7 @@ export function Services() {
         <div className="space-y-4 mb-16 text-center">
           {/* Flipped gradient (Dark->Mid->Dark) and added w-fit mx-auto for dynamic width */}
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700 bg-clip-text text-transparent text-balance w-fit mx-auto">
-            How I Can Help You
+            Book Your 1:1 Session Now
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Personalized guidance for engineers at every stage of their journey.
@@ -71,13 +71,13 @@ export function Services() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon
-            const isResumeReview = service.title === "Resume Review"
+            const hasLink = service.link && service.link.trim() !== ""
 
-            if (isResumeReview) {
+            if (hasLink) {
               return (
                 <a
                   key={index}
-                  href="https://adplist.org/mentors/yahya-alaa?session=resume-review-7dd8-mi2nw036"
+                  href={service.link}
                   target="_blank"
                   rel="noreferrer"
                   className="flex flex-col items-center text-center p-6 rounded-2xl glass-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer group relative overflow-hidden"
