@@ -126,7 +126,13 @@ export function Testimonials() {
         </div>
 
         {/* Horizontal auto-scrolling container */}
-        <div className="relative max-w-5xl mx-auto">
+        <div
+          className="relative max-w-5xl mx-auto"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+          }}
+        >
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto scrollbar-hide py-8 items-start"
