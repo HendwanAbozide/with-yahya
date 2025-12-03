@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Star } from "lucide-react"
+import { Star, Quote, ExternalLink } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import testimonialsData from "@/data/testimonials.json"
 
@@ -144,33 +144,66 @@ export function Testimonials() {
             onMouseLeave={() => setIsPaused(false)}
           >
             {duplicatedTestimonials.map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 w-[280px]">
-                <Card className="glass transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl">
-                  <CardContent className="p-4 space-y-3">
-                    {/* Rating */}
-                    <div className="flex items-center gap-2">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="font-semibold text-foreground text-sm">{testimonial.rating}/5</span>
-                    </div>
+              <div key={index} className="flex-shrink-0 w-[320px]">
+                <a
+                  href={testimonial.link || "#"}
+                  target={testimonial.link ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  className={`block h-full ${!testimonial.link ? 'cursor-default' : 'cursor-pointer'}`}
+                  onClick={(e) => !testimonial.link && e.preventDefault()}
+                >
+                  <Card className="h-full glass relative overflow-hidden group border-white/20 bg-white/60 hover:bg-white/80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
 
-                    {/* Testimonial Text */}
-                    <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: testimonial.text }} />
-
-                    {/* Author Info */}
-                    <div className="pt-3 border-t flex items-center gap-3">
-                      <img
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        className="w-8 h-8 rounded-full"
-                        draggable={false}
-                      />
-                      <div>
-                        <div className="font-semibold text-foreground text-sm">{testimonial.name}</div>
-                        <div className="text-xs text-muted-foreground">{testimonial.date}</div>
+                    <CardContent className="p-6 space-y-4 relative z-10 flex flex-col h-full">
+                      {/* Header: Rating & Platform */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1 bg-yellow-500/10 px-2 py-1 rounded-full">
+                          <Star className="w-3.5 h-3.5 fill-yellow-500 text-yellow-500" />
+                          <span className="font-bold text-yellow-700 text-xs">{testimonial.rating}.0</span>
+                        </div>
+                        {testimonial.type && (
+                          <span className="text-[10px] uppercase tracking-wider font-bold text-muted-foreground/50 bg-secondary/50 px-2 py-1 rounded-md">
+                            {testimonial.type}
+                          </span>
+                        )}
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+
+                      {/* Testimonial Text */}
+                      <div className="flex-grow">
+                        <p className="text-[15px] text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: testimonial.text }} />
+                      </div>
+
+                      {/* Author Info */}
+                      <div className="pt-4 border-t border-black/5 flex items-center gap-3 mt-auto">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-blue-500 blur opacity-20 rounded-full"></div>
+                          <img
+                            src={testimonial.avatar}
+                            alt={testimonial.name}
+                            className="w-10 h-10 rounded-full object-cover relative border-2 border-white shadow-sm"
+                            draggable={false}
+                          />
+                        </div>
+                        <div>
+                          <div className="font-bold text-foreground text-sm">{testimonial.name}</div>
+                          <div className="text-xs text-muted-foreground font-medium">{testimonial.date}</div>
+                        </div>
+                      </div>
+                    </CardContent>
+
+                    {/* Hover Overlay */}
+                    {testimonial.link && (
+                      <div className="absolute inset-0 bg-blue-600/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px]">
+                        <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3 backdrop-blur-sm">
+                            <ExternalLink className="w-6 h-6 text-white" />
+                          </div>
+                          <span className="font-bold text-sm tracking-wide">View Original Review</span>
+                        </div>
+                      </div>
+                    )}
+                  </Card>
+                </a>
               </div>
             ))}
           </div>
