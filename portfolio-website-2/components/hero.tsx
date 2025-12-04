@@ -4,18 +4,55 @@ import { Button } from "@/components/ui/button"
 import { Linkedin, Mail, Github, Calendar, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { ADPListButton } from "@/components/adplist-button"
+import { useState, useEffect } from "react"
+
+const phrases = ["Guidance", "Free Mentorship", "Career Exploration"]
 
 export function Hero() {
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentPhrase = phrases[currentPhraseIndex]
+    const typingSpeed = isDeleting ? 50 : 100 // Faster when deleting
+    const pauseTime = 2000 // Pause when fully typed
+
+    const timer = setTimeout(() => {
+      if (!isDeleting && displayedText === currentPhrase) {
+        // Pause before deleting
+        setTimeout(() => setIsDeleting(true), pauseTime)
+      } else if (isDeleting && displayedText === "") {
+        // Move to next phrase
+        setIsDeleting(false)
+        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length)
+      } else if (isDeleting) {
+        // Delete one character
+        setDisplayedText(currentPhrase.substring(0, displayedText.length - 1))
+      } else {
+        // Type one character
+        setDisplayedText(currentPhrase.substring(0, displayedText.length + 1))
+      }
+    }, typingSpeed)
+
+    return () => clearTimeout(timer)
+  }, [currentPhraseIndex, displayedText, isDeleting])
+
   return (
     <section id="hero" className="pt-20 pb-16 px-6 min-h-screen flex items-center relative">
       <div className="container mx-auto max-w-6xl relative z-10 mt-16 md:mt-20 lg:mt-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 order-2 md:order-1">
+          <div className="space-y-8 order-2 md:order-2">
             <div className="space-y-6">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance leading-tight">
-                <span className="whitespace-nowrap">Free Mentorship for</span>{" "}
-                <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
-                  Aspiring Engineers
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <span className="block min-h-[1.2em] mb-2">
+                  <span>
+                    {displayedText}
+                    <span className="animate-pulse">|</span>
+                  </span>
+                </span>
+                <span className="block bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
+                  with Yahya
                 </span>
               </h1>
               <h2 className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed font-normal">
@@ -63,7 +100,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative flex justify-center items-center order-1 md:order-2 text-primary">
+          <div className="relative flex justify-center items-center order-1 md:order-1 text-primary">
             {/* Profile picture with rotating dashed ring */}
             <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] flex items-center justify-center group" style={{ perspective: '1200px' }}>
               {/* Rotating dashed ring - vertical flip */}

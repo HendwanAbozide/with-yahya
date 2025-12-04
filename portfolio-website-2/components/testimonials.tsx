@@ -5,6 +5,9 @@ import { Star, Quote, ExternalLink, Calendar, MessageCircle, Clock, LucideIcon }
 import { useEffect, useRef, useState } from "react"
 import testimonialsData from "@/data/testimonials.json"
 import statsData from "@/data/stats.json"
+import { Inter } from "next/font/google"
+
+const inter = Inter({ subsets: ["latin"] })
 
 const testimonials = testimonialsData
 
@@ -110,20 +113,19 @@ export function Testimonials() {
           </h2>
 
           {/* Stats with animated counters */}
-          {/* Stats with animated counters */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-2xl mx-auto">
             {statsData.map((stat, index) => {
               const Icon = iconMap[stat.icon] || Calendar
               return (
-                <div key={index} className="glass px-6 py-4 rounded-xl flex items-center justify-center gap-4 transition-transform hover:-translate-y-1 duration-300">
-                  <div className="p-2 bg-blue-500/10 rounded-full shrink-0">
+                <div key={index} className="glass px-3 py-2.5 rounded-xl flex flex-col items-center justify-center gap-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:border-blue-500/30">
+                  <div className="p-2 bg-blue-500/10 rounded-full">
                     <Icon className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="text-left">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent leading-none mb-1">
+                  <div className="text-center">
+                    <div className={`text-2xl font-black tabular-nums text-blue-500 leading-none mb-1 ${inter.className}`}>
                       <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                     </div>
-                    <div className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{stat.label}</div>
+                    <div className="text-sm font-semibold text-muted-foreground tracking-tight">{stat.label}</div>
                   </div>
                 </div>
               )
