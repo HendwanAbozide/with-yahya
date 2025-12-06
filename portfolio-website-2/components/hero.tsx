@@ -10,8 +10,6 @@ const slogans = [
   "Free Mentorship",
   "Build your tech career",
   "Collaborative Learning",
-  "Machine Learning Mastery",
-  "Guided Career Growth",
   "Level up your tech career",
   "Break into machine learning",
   "Production-ready ML skills",
@@ -22,14 +20,33 @@ const slogans = [
 
 export function Hero() {
   const [currentSloganIndex, setCurrentSloganIndex] = useState(0)
+  const [displayedText, setDisplayedText] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSloganIndex((prevIndex) => (prevIndex + 1) % slogans.length)
-    }, 3000) // Change slogan every 3 seconds
+    const currentSlogan = slogans[currentSloganIndex]
+    const typingSpeed = isDeleting ? 50 : 100 // Faster when deleting
+    const pauseTime = 2000 // Pause when fully typed
 
-    return () => clearInterval(interval)
-  }, [])
+    const timer = setTimeout(() => {
+      if (!isDeleting && displayedText === currentSlogan) {
+        // Pause before deleting
+        setTimeout(() => setIsDeleting(true), pauseTime)
+      } else if (isDeleting && displayedText === "") {
+        // Move to next slogan
+        setIsDeleting(false)
+        setCurrentSloganIndex((prev) => (prev + 1) % slogans.length)
+      } else if (isDeleting) {
+        // Delete one character
+        setDisplayedText(currentSlogan.substring(0, displayedText.length - 1))
+      } else {
+        // Type one character
+        setDisplayedText(currentSlogan.substring(0, displayedText.length + 1))
+      }
+    }, typingSpeed)
+
+    return () => clearTimeout(timer)
+  }, [currentSloganIndex, displayedText, isDeleting])
 
   return (
     <section id="hero" className="pt-20 pb-16 px-6 min-h-screen flex items-center relative">
@@ -37,14 +54,14 @@ export function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 order-2 md:order-1">
             <div className="space-y-6">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance leading-tight">
-                <span
-                  key={currentSloganIndex}
-                  className="inline-block animate-fade-in whitespace-nowrap"
-                >
-                  {slogans[currentSloganIndex]}
-                </span>{" "}
-                <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <span className="block min-h-[1.2em] mb-2">
+                  <span>
+                    {displayedText}
+                    <span className="animate-pulse">|</span>
+                  </span>
+                </span>
+                <span className="block bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
                   with Yahya
                 </span>
               </h1>
