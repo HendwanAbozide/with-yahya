@@ -37,7 +37,7 @@ export function Hero() {
                   key={currentSloganIndex}
                   className="inline-block animate-fade-in whitespace-nowrap"
                 >
-                  {slogans[currentSloganIndex]} for
+                  {slogans[currentSloganIndex]}
                 </span>{" "}
                 <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
                   with Yahya
