@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Linkedin, Mail, Github, Calendar, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import { ADPListButton } from "@/components/adplist-button"
 import { useState, useEffect } from "react"
 
 const slogans = [
@@ -39,28 +40,18 @@ export function Hero() {
                   {slogans[currentSloganIndex]} for
                 </span>{" "}
                 <span className="bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
-                  Aspiring Engineers
+                  with Yahya
                 </span>
               </h1>
               <h2 className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed font-normal">
                 👋 I'm <span className="font-semibold text-foreground">Yahya Alaa</span>, a Senior Machine Learning
-                Engineer. I help engineers grow their careers through resume reviews, and personalized
+                Engineer. I help engineers grow their careers through 1:1 guidance, resume reviews, and personalized
                 career advice.
               </h2>
 
               <div className="space-y-4 pt-4">
-                <p className="text-base font-medium text-foreground/80">Book Free Mentorship</p>
                 <div className="flex flex-col gap-3 items-start">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-[#141414] hover:bg-[#141414]/90 text-white font-semibold px-8 transition-transform hover:scale-110 active:scale-95 shadow-lg hover:shadow-xl"
-                  >
-                    <a href="https://adplist.org/mentors/yahya-alaa" target="_blank" rel="noopener noreferrer">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      Book on ADPList
-                    </a>
-                  </Button>
+                  <ADPListButton />
                   <p className="text-sm text-muted-foreground">
                     Also available on{" "}
                     <a
@@ -79,7 +70,7 @@ export function Hero() {
 
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/yahya-alaa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-700 hover:text-primary transition-colors"
@@ -88,16 +79,9 @@ export function Hero() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com"
+                href="mailto:yahya.alaa.massoud@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-700 hover:text-primary transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contact@example.com"
                 className="text-neutral-700 hover:text-primary transition-colors"
                 aria-label="Email"
               >
@@ -106,7 +90,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative flex justify-center items-center order-1 md:order-2 text-primary">
+          <div className="relative flex justify-center items-center order-1 md:order-1 text-primary">
             {/* Profile picture with rotating dashed ring */}
             <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] flex items-center justify-center group" style={{ perspective: '1200px' }}>
               {/* Rotating dashed ring - vertical flip */}
