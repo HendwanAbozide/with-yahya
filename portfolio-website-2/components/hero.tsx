@@ -9,7 +9,6 @@ import { useState, useEffect } from "react"
 const slogans = [
   "Free Mentorship",
   "Career Exploration",
-  "Growing Together",
   "Collaborative Learning",
   "Machine Learning Mastery",
   "Guided Career Growth"
