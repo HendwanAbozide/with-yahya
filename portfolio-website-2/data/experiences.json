@@ -2,31 +2,37 @@
     {
         "company": "Shopify",
         "role": "Senior ML Engineer",
-        "logo": "/images/shopify-logo.png"
+        "logo": "/images/shopify-logo.png",
+        "link": ""
     },
     {
         "company": "Tempo Analytics",
         "role": "ML Engineer",
-        "logo": "/images/tempo-logo.png"
+        "logo": "/images/tempo-logo.png",
+        "link": ""
     },
     {
         "company": "VRapeutic",
         "role": "Technical Lead & Co-founder",
-        "logo": "/images/vrapeutic-logo.png"
+        "logo": "/images/vrapeutic-logo.png",
+        "link": ""
     },
     {
         "company": "SensorCortek",
         "role": "ML Engineer",
-        "logo": "/images/sensorcortek-logo.png"
+        "logo": "/images/sensorcortek-logo.png",
+        "link": ""
     },
     {
         "company": "VIVA Lab",
         "role": "AI Researcher",
-        "logo": "/images/vivalab-logo.png"
+        "logo": "/images/vivalab-logo.png",
+        "link": ""
     },
     {
         "company": "Intelligent Systems Lab",
         "role": "ML Engineer",
-        "logo": "/images/isl-logo.png"
+        "logo": "/images/isl-logo.png",
+        "link": ""
     }
 ]

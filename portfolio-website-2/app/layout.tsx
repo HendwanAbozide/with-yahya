@@ -13,7 +13,7 @@ const _geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Mentorship & Consulting - Yahya Alaa",
+  title: "Free Mentorship - Yahya Alaa",
   description:
     "Free mentorship for aspiring engineers. Get expert guidance on career growth, portfolio reviews, and personalized career advice from a Senior ML Engineer at Shopify.",
   generator: "v0.app",

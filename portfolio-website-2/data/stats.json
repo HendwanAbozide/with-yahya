@@ -1,0 +1,20 @@
+[
+    {
+        "value": 61,
+        "suffix": "+",
+        "label": "Bookings",
+        "icon": "Calendar"
+    },
+    {
+        "value": 27,
+        "suffix": "+",
+        "label": "Reviews",
+        "icon": "MessageCircle"
+    },
+    {
+        "value": 2745,
+        "suffix": "+",
+        "label": "Minutes",
+        "icon": "Clock"
+    }
+]

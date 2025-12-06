@@ -2,26 +2,31 @@
     {
         "icon": "Target",
         "title": "Career Direction & Roadmaps",
-        "description": "Get clarity on skills to learn, what to focus on, and what to ignore."
+        "description": "Get clarity on skills to learn, what to focus on, and what to ignore.",
+        "link": "https://adplist.org/mentors/yahya-alaa?session=67653-mentorship-session"
     },
     {
         "icon": "FileText",
         "title": "Resume Review",
-        "description": "Actionable feedback that improves your visibility and interview chances."
+        "description": "Actionable feedback that improves your visibility and interview chances.",
+        "link": "https://adplist.org/mentors/yahya-alaa?session=resume-review-7dd8-mi2nw036"
     },
     {
         "icon": "Briefcase",
         "title": "Portfolio & Project Guidance",
-        "description": "Learn how to choose, structure, and present impactful technical projects."
+        "description": "Learn how to choose, structure, and present impactful technical projects.",
+        "link": "https://adplist.org/mentors/yahya-alaa?session=67653-mentorship-session"
     },
     {
         "icon": "Code2",
         "title": "Machine Learning Mentorship",
-        "description": "Ask about ML fundamentals, pipelines, modeling, MLOps, and real-world workflows."
+        "description": "Ask about ML fundamentals, pipelines, modeling, MLOps, and real-world workflows.",
+        "link": "https://adplist.org/mentors/yahya-alaa?session=67653-mentorship-session"
     },
     {
         "icon": "MessageSquare",
         "title": "Interview Preparation",
-        "description": "Mock interviews, feedback, and strategies to help you perform with confidence."
+        "description": "Mock interviews, feedback, and strategies to help you perform with confidence.",
+        "link": "https://adplist.org/mentors/yahya-alaa?session=interview-preparation-7dd8-mim3qagc"
     }
 ]
