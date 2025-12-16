@@ -7,7 +7,7 @@ interface ADPListButtonProps {
 
 export function ADPListButton({
     href = "https://adplist.org/mentors/yahya-alaa?session=67653-mentorship-session",
-    text = "Book a free session with me on ADPList",
+    text = "Book a free session on ADPList",
 }: ADPListButtonProps) {
     const [isHovered, setIsHovered] = useState(false)
 
