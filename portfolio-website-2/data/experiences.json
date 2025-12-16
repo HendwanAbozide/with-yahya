@@ -1,32 +1,27 @@
 [
     {
         "company": "Shopify",
-        "role": "Senior ML Engineer",
+        "role": "Senior Applied Machine Learning Engineer",
         "period": "2023–Present",
-        "outcome": "Search, ranking, large-scale ML systems",
+        "outcome": "Growth Marketing",
         "logo": "/images/shopify-logo.png",
         "highlights": [
-            "Built ranking models used in production search serving millions of users",
-            "Designed ML systems with strict latency and quality constraints",
-            "Led experimentation and ML evaluation for search improvements"
+            "Built production ML systems to support marketing optimization and automation"
         ],
         "tools": [
-            "PyTorch",
-            "Kubernetes",
-            "TensorFlow",
-            "MLOps"
+            "Vertex AI",
+            "DBT",
+            "BigQuery"
         ]
     },
     {
         "company": "Tempo Analytics",
-        "role": "ML Engineer",
+        "role": "Machine Learning Engineer",
         "period": "2022–2023",
-        "outcome": "Video analytics & computer vision for QSR industry",
+        "outcome": "Video analytics platform",
         "logo": "/images/tempo-logo.png",
         "highlights": [
-            "Developed real-time video analytics pipelines for restaurant operations",
-            "Built ML models for activity recognition and queue management",
-            "Optimized inference performance for edge deployment"
+            "Led the development of a video analytics platform for quick-service restaurants, enabling speed-of-service analytics via a computer vision engine for people tracking and re-identification."
         ],
         "tools": [
             "Computer Vision",
@@ -39,12 +34,10 @@
         "company": "VRapeutic",
         "role": "Technical Lead & Co-founder",
         "period": "2020–2022",
-        "outcome": "VR therapeutics for pediatric healthcare",
+        "outcome": "VR therapeutics for developmental disorders",
         "logo": "/images/vrapeutic-logo.png",
         "highlights": [
-            "Led technical strategy for VR-based therapeutic interventions",
-            "Built immersive VR experiences combined with AI-driven adaptation",
-            "Scaled product from prototype to clinical trials with healthcare partners"
+            "Led technical strategy for VR-based therapeutic interventions"
         ],
         "tools": [
             "Unity",
@@ -55,14 +48,13 @@
     },
     {
         "company": "SensorCortek",
-        "role": "ML Engineer",
+        "role": "Machine Learning Engineer",
         "period": "2019–2020",
         "outcome": "Perception systems for autonomous vehicles",
         "logo": "/images/sensorcortek-logo.png",
         "highlights": [
             "Developed object detection and tracking for autonomous driving",
-            "Worked on sensor fusion combining LiDAR and camera data",
-            "Optimized models for real-time inference on embedded systems"
+            "Worked on sensor fusion combining LiDAR and camera data"
         ],
         "tools": [
             "Computer Vision",
@@ -91,14 +83,13 @@
     },
     {
         "company": "Intelligent Systems Lab",
-        "role": "ML Engineer",
+        "role": "Machine Learning Engineer",
         "period": "2017–2018",
         "outcome": "AR pose estimation & computer vision",
         "logo": "/images/isl-logo.png",
         "highlights": [
             "Built pose estimation models for augmented reality applications",
-            "Developed real-time tracking systems for mobile AR",
-            "Optimized models for mobile device constraints"
+            "Developed real-time tracking systems for mobile AR"
         ],
         "tools": [
             "Computer Vision",

@@ -15,10 +15,12 @@ interface ResearchBentoProps {
 }
 
 export function ResearchBento({ publications }: ResearchBentoProps) {
+    const sortedPublications = [...publications].sort((a, b) => parseInt(b.year) - parseInt(a.year))
+
     return (
         <div className="w-full">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {publications.map((pub, index) => (
+                {sortedPublications.map((pub, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}

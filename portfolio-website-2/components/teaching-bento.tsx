@@ -52,10 +52,7 @@ export function TeachingBento({ teaching }: TeachingBentoProps) {
                                     />
                                 </div>
 
-                                {/* Year Badge */}
-                                <span className="text-xs font-semibold text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full">
-                                    {item.year}
-                                </span>
+
                             </div>
 
                             {/* Role, Institution, Course & Outcome */}
@@ -69,9 +66,7 @@ export function TeachingBento({ teaching }: TeachingBentoProps) {
                                 <p className="text-sm text-muted-foreground leading-relaxed">
                                     {item.course}
                                 </p>
-                                <p className="text-sm text-muted-foreground/80 italic">
-                                    {item.outcome}
-                                </p>
+
                             </div>
 
                             {/* Expand Indicator */}
@@ -98,9 +93,9 @@ export function TeachingBento({ teaching }: TeachingBentoProps) {
                                         className="overflow-hidden"
                                     >
                                         <div className="pt-4 mt-4 border-t border-border/30 space-y-3">
-                                            <h4 className="text-sm font-bold text-foreground mb-2">
-                                                What I Taught
-                                            </h4>
+                                            <p className="text-sm text-muted-foreground/80 italic mb-2">
+                                                {item.outcome}
+                                            </p>
                                             <ul className="space-y-2">
                                                 {item.highlights.map((highlight, i) => (
                                                     <li

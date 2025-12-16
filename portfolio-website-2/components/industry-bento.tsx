@@ -59,10 +59,7 @@ export function IndustryBento({ experiences }: IndustryBentoProps) {
                                     />
                                 </div>
 
-                                {/* Date Badge */}
-                                <span className="text-xs font-semibold text-muted-foreground bg-secondary/50 px-3 py-1 rounded-full">
-                                    {exp.period}
-                                </span>
+
                             </div>
 
                             {/* Role & Outcome */}
@@ -102,9 +99,6 @@ export function IndustryBento({ experiences }: IndustryBentoProps) {
                                         className="overflow-hidden"
                                     >
                                         <div className="pt-4 mt-4 border-t border-border/30 space-y-3">
-                                            <h4 className="text-sm font-bold text-foreground mb-2">
-                                                What I Actually Did
-                                            </h4>
                                             <ul className="space-y-2">
                                                 {exp.highlights.map((highlight, i) => (
                                                     <li

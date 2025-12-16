@@ -1,10 +1,10 @@
 [
     {
         "role": "Part-time Professor",
-        "course": "Software Engineering & AI",
+        "course": "Data Structures & Algorithms",
         "institution": "University of Ottawa",
         "year": "2023–Present",
-        "outcome": "Teaching next-gen software engineers",
+        "outcome": "",
         "logo": "/images/uottawa-logo.png",
         "highlights": [
             "Designed and delivered curriculum on modern software engineering practices",
@@ -17,7 +17,7 @@
         "course": "Computer Science Courses",
         "institution": "University of Ottawa",
         "year": "2018–2022",
-        "outcome": "Supporting CS education across multiple courses",
+        "outcome": "",
         "logo": "/images/uottawa-logo.png",
         "highlights": [
             "Assisted in teaching various computer science courses",
@@ -30,7 +30,7 @@
         "course": "Computer Vision",
         "institution": "ITI Egypt",
         "year": "2019",
-        "outcome": "Training professionals in computer vision",
+        "outcome": "",
         "logo": "/images/iti-logo.jpg",
         "highlights": [
             "Taught intensive computer vision course to industry professionals",
