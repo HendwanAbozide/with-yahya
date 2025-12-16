@@ -59,8 +59,8 @@ export function Hero() {
               </h1>
               <h2 className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed font-normal">
                 👋 I'm <span className="font-semibold text-foreground">Yahya Alaa</span>, a Senior Machine Learning
-                Engineer. I help engineers grow their careers through 1:1 guidance, resume reviews, and personalized
-                career advice.
+                Engineer with a Masters in AI. <br></br>
+                I help engineers navigate their careers with clarity through <span className="font-semibold text-foreground underline decoration-primary/30 underline-offset-[6px] decoration-2">personalized technical mentorship</span>, <span className="font-semibold text-foreground underline decoration-primary/30 underline-offset-[6px] decoration-2">comprehensive resume reviews</span>, and <span className="font-semibold text-foreground underline decoration-primary/30 underline-offset-[6px] decoration-2">actionable advice</span>.
               </h2>
 
               <div className="space-y-4 pt-4">
