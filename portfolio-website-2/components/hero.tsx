@@ -8,14 +8,8 @@ import { useState, useEffect } from "react"
 
 const slogans = [
   "Free Mentorship",
-  "Build your tech career",
-  "Collaborative Learning",
-  "Level up your tech career",
-  "Break into machine learning",
-  "Production-ready ML skills",
-  "Real-world ML mentoring",
-  "System design made simple",
-  "Build your interview confidence"
+  "Resume Reviews",
+  "ML Career Advice"
 ]
 
 export function Hero() {
@@ -51,15 +45,13 @@ export function Hero() {
   return (
     <section id="hero" className="pt-20 pb-16 px-6 min-h-screen flex items-center relative">
       <div className="container mx-auto max-w-6xl relative z-10 mt-16 md:mt-20 lg:mt-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-[1.5fr_1fr] gap-12 items-center">
           <div className="space-y-8 order-2 md:order-1">
             <div className="space-y-6">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                <span className="block min-h-[1.2em] mb-2">
-                  <span>
-                    {displayedText}
-                    <span className="animate-pulse">|</span>
-                  </span>
+                <span className="block mb-2">
+                  {displayedText}
+                  <span className="animate-pulse">|</span>
                 </span>
                 <span className="block bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent">
                   with Yahya
