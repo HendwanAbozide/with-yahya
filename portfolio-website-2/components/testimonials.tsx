@@ -7,9 +7,8 @@ import testimonialsData from "@/data/testimonials.json"
 import statsData from "@/data/stats.json"
 import { Inter } from "next/font/google"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import useEmblaCarousel from "embla-carousel-react"
-import AutoScroll from "embla-carousel-auto-scroll"
 import { PlatformBadge } from "@/components/platform-badge"
+import { TestimonialColumn } from "@/components/testimonial-column"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -64,27 +63,14 @@ function AnimatedCounter({ end, duration = 2500, suffix = "" }: { end: number; d
 }
 
 export function Testimonials() {
-  // Embla Carousel hook with AutoScroll plugin
-  const [emblaRef] = useEmblaCarousel(
-    {
-      loop: true,
-      dragFree: true,
-      containScroll: "trimSnaps"
-    },
-    [
-      AutoScroll({
-        playOnInit: true,
-        stopOnInteraction: false,
-        stopOnMouseEnter: false,
-        stopOnFocusIn: false,
-        speed: 0.5
-      })
-    ]
-  )
+  // Split testimonials into 3 columns
+  const column1 = testimonials.slice(0, 10)
+  const column2 = testimonials.slice(10, 20)
+  const column3 = testimonials.slice(20)
 
   return (
-    <section id="testimonials" className="py-24 px-6 overflow-hidden">
-      <div className="container mx-auto w-full">
+    <section id="testimonials" className="py-24 px-6 overflow-hidden bg-secondary/20">
+      <div className="container mx-auto w-full max-w-7xl">
         <div className="space-y-6 mb-16 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700 bg-clip-text text-transparent text-balance w-fit mx-auto">
@@ -113,58 +99,18 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Embla Carousel Container */}
+        {/* Marquee Grid Container */}
         <div
-          className="relative max-w-7xl mx-auto"
+          className="relative h-[800px] overflow-hidden"
           style={{
-            maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+            maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
           }}
         >
-          <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
-            <div className="flex py-8 items-start touch-pan-y">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 w-[320px] select-none mr-6">
-                  <Card className="h-full glass relative overflow-hidden border-white/20 bg-white/60 transition-all duration-500 shadow-lg hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] hover:border-blue-500/30">
-
-                    <CardContent className="p-6 space-y-4 relative z-10 flex flex-col h-full">
-                      {/* Header: Rating & Platform */}
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1 bg-yellow-500/10 px-2 py-1 rounded-full">
-                          <Star className="w-3.5 h-3.5 fill-yellow-500 text-yellow-500" />
-                          <span className="font-bold text-yellow-700 text-xs">{testimonial.rating}.0</span>
-                        </div>
-                        {testimonial.type && (
-                          <PlatformBadge type={testimonial.type} />
-                        )}
-                      </div>
-
-                      {/* Testimonial Text */}
-                      <div className="flex-grow">
-                        <p className="text-[15px] text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: testimonial.text }} />
-                      </div>
-
-                      {/* Author Info */}
-                      <div className="pt-4 border-t border-black/5 flex items-center gap-3 mt-auto">
-                        <div className="relative">
-                          <div className="absolute inset-0 bg-blue-500 blur opacity-20 rounded-full"></div>
-                          <img
-                            src={testimonial.avatar}
-                            alt={testimonial.name}
-                            className="w-10 h-10 rounded-full object-cover relative border-2 border-white shadow-sm"
-                            draggable={false}
-                          />
-                        </div>
-                        <div>
-                          <div className="font-bold text-foreground text-sm">{testimonial.name}</div>
-                          <div className="text-xs text-muted-foreground font-medium">{testimonial.date}</div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 h-full">
+            <TestimonialColumn testimonials={column1} duration={column1.length * 10} />
+            <TestimonialColumn testimonials={column2} duration={column2.length * 10} className="hidden md:block" />
+            <TestimonialColumn testimonials={column3} duration={column3.length * 10} className="hidden lg:block" />
           </div>
         </div>
       </div>
