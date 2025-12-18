@@ -1,38 +1,101 @@
 [
     {
         "company": "Shopify",
-        "role": "Senior ML Engineer",
+        "role": "Senior Applied Machine Learning Engineer",
+        "period": "2023–Present",
+        "outcome": "E-commerce Platform",
         "logo": "/images/shopify-logo.png",
-        "link": ""
+        "highlights": [
+            "Built production ML systems to support experimentation platform and marketing optimization"
+        ],
+        "tools": [
+            "Experimentation Platform",
+            "Growth Marketing",
+            "Marketing Technology",
+            "Vertex AI",
+            "DBT",
+            "BigQuery"
+        ]
     },
     {
         "company": "Tempo Analytics",
-        "role": "ML Engineer",
+        "role": "Machine Learning Engineer",
+        "period": "2022–2023",
+        "outcome": "Video Analytics Platform",
         "logo": "/images/tempo-logo.png",
-        "link": ""
+        "highlights": [
+            "Led the development of a video analytics platform for quick-service restaurants, enabling speed-of-service analytics via a computer vision engine for people detection, tracking, and re-identification"
+        ],
+        "tools": [
+            "Computer Vision",
+            "Edge ML",
+            "PyTorch",
+            "TensorFlow",
+            "OpenMMLab"
+        ]
     },
     {
         "company": "VRapeutic",
         "role": "Technical Lead & Co-founder",
+        "period": "2020–2022",
+        "outcome": "VR Therapeutics for Developmental Disorders",
         "logo": "/images/vrapeutic-logo.png",
-        "link": ""
+        "highlights": [
+            "Led technical strategy for VR-based therapeutic interventions"
+        ],
+        "tools": [
+            "Unity",
+            "VR Development",
+            "ML Integration",
+            "Healthcare Tech"
+        ]
     },
     {
         "company": "SensorCortek",
-        "role": "ML Engineer",
+        "role": "Machine Learning Engineer",
+        "period": "2019–2020",
+        "outcome": "Perception Systems for Autonomous Vehicles",
         "logo": "/images/sensorcortek-logo.png",
-        "link": ""
+        "highlights": [
+            "Worked on sensor fusion combining LiDAR, radar, and camera sensors"
+        ],
+        "tools": [
+            "Computer Vision",
+            "Sensor Fusion",
+            "Deep Learning",
+            "Embedded Systems"
+        ]
     },
     {
         "company": "VIVA Lab",
-        "role": "AI Researcher",
+        "role": "Computer Vision Researcher",
+        "period": "2018–2019",
+        "outcome": "Multimodal Deep Learning Research",
         "logo": "/images/vivalab-logo.png",
-        "link": ""
+        "highlights": [
+            "Researched multimodal learning combining visual and sensor data",
+            "Published papers on deep learning architectures for fusion tasks",
+            "Developed novel approaches for handling multimodal data sources"
+        ],
+        "tools": [
+            "Multimodal Deep Learning",
+            "Research"
+        ]
     },
     {
         "company": "Intelligent Systems Lab",
-        "role": "ML Engineer",
+        "role": "Machine Learning Engineer",
+        "period": "2017–2018",
+        "outcome": "AR Pose Estimation & Computer Vision",
         "logo": "/images/isl-logo.png",
-        "link": ""
+        "highlights": [
+            "Built pose estimation models for augmented reality applications"
+        ],
+        "tools": [
+            "Computer Vision",
+            "AR Development",
+            "Deep Learning",
+            "Tensorflow.js"
+        ]
     }
 ]

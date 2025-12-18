@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Code2, FileText, Briefcase, Target, MessageSquare, LucideIcon } from "lucide-react"
+import { Code2, FileText, Briefcase, Target, MessageSquare, LucideIcon, ArrowUpRight } from "lucide-react"
 import servicesData from "@/data/services.json"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
@@ -83,7 +83,7 @@ export function Services() {
                   href={service.link}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex flex-col items-center text-center p-6 rounded-2xl glass-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer group relative overflow-hidden"
+                  className="flex flex-col items-center text-center p-6 rounded-2xl glass-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:scale-[0.98] cursor-pointer group relative overflow-hidden"
                 >
                   <div className="h-16 w-16 rounded-full bg-blue-50/80 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="h-8 w-8" style={{ stroke: "url(#blue-gradient-icon)" }} />
@@ -91,9 +91,9 @@ export function Services() {
                   <h3 className="text-lg font-semibold text-foreground mb-2">{service.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-8">{service.description}</p>
 
-                  <div className="absolute bottom-4 left-0 right-0 text-center">
-                    <span className="text-xs font-bold text-blue-600 uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      Click to Book
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+                    <span className="flex items-center text-xs font-bold text-blue-600 tracking-wider opacity-100 translate-x-0 md:opacity-0 md:-translate-x-2 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-300">
+                      Click to Book <ArrowUpRight className="w-3 h-3 ml-1" />
                     </span>
                   </div>
                 </a>
