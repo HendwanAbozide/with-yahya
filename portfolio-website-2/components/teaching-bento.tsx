@@ -12,6 +12,7 @@ interface Teaching {
     outcome: string
     logo: string
     highlights: string[]
+    courses?: string[]
 }
 
 interface TeachingBentoProps {
@@ -107,6 +108,20 @@ export function TeachingBento({ teaching }: TeachingBentoProps) {
                                                     </li>
                                                 ))}
                                             </ul>
+
+                                            {/* Courses as Badges */}
+                                            {item.courses && item.courses.length > 0 && (
+                                                <div className="flex flex-wrap gap-2 pt-2">
+                                                    {item.courses.map((course, i) => (
+                                                        <span
+                                                            key={i}
+                                                            className="text-xs bg-blue-500/10 text-blue-600 px-2 py-1 rounded-full"
+                                                        >
+                                                            {course}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </div>
                                     </motion.div>
                                 )}

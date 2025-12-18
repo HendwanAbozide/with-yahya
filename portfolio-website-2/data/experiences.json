@@ -3,12 +3,15 @@
         "company": "Shopify",
         "role": "Senior Applied Machine Learning Engineer",
         "period": "2023–Present",
-        "outcome": "Growth Marketing",
+        "outcome": "E-commerce Platform",
         "logo": "/images/shopify-logo.png",
         "highlights": [
-            "Built production ML systems to support marketing optimization and automation"
+            "Built production ML systems to support experimentation platform, marketing optimization, budget automation, and valuation models"
         ],
         "tools": [
+            "Experimentation Platform",
+            "Growth Marketing",
+            "Marketing Technology",
             "Vertex AI",
             "DBT",
             "BigQuery"
@@ -18,23 +21,24 @@
         "company": "Tempo Analytics",
         "role": "Machine Learning Engineer",
         "period": "2022–2023",
-        "outcome": "Video analytics platform",
+        "outcome": "Video Analytics Platform",
         "logo": "/images/tempo-logo.png",
         "highlights": [
-            "Led the development of a video analytics platform for quick-service restaurants, enabling speed-of-service analytics via a computer vision engine for people tracking and re-identification."
+            "Led the development of a video analytics platform for quick-service restaurants, enabling speed-of-service analytics via a computer vision engine for people detection, tracking, and re-identification"
         ],
         "tools": [
             "Computer Vision",
             "Edge ML",
-            "Python",
-            "TensorFlow"
+            "PyTorch",
+            "TensorFlow",
+            "OpenMMLab"
         ]
     },
     {
         "company": "VRapeutic",
         "role": "Technical Lead & Co-founder",
         "period": "2020–2022",
-        "outcome": "VR therapeutics for developmental disorders",
+        "outcome": "VR Therapeutics for Developmental Disorders",
         "logo": "/images/vrapeutic-logo.png",
         "highlights": [
             "Led technical strategy for VR-based therapeutic interventions"
@@ -50,11 +54,10 @@
         "company": "SensorCortek",
         "role": "Machine Learning Engineer",
         "period": "2019–2020",
-        "outcome": "Perception systems for autonomous vehicles",
+        "outcome": "Perception Systems for Autonomous Vehicles",
         "logo": "/images/sensorcortek-logo.png",
         "highlights": [
-            "Developed object detection and tracking for autonomous driving",
-            "Worked on sensor fusion combining LiDAR and camera data"
+            "Worked on sensor fusion combining LiDAR, radar, and camera sensors"
         ],
         "tools": [
             "Computer Vision",
@@ -65,37 +68,34 @@
     },
     {
         "company": "VIVA Lab",
-        "role": "AI Researcher",
+        "role": "AI Researcher (Computer Vision)",
         "period": "2018–2019",
-        "outcome": "Multimodal deep learning & sensor fusion research",
+        "outcome": "Multimodal Deep Learning Research",
         "logo": "/images/vivalab-logo.png",
         "highlights": [
             "Researched multimodal learning combining visual and sensor data",
             "Published papers on deep learning architectures for fusion tasks",
-            "Developed novel approaches for handling heterogeneous data sources"
+            "Developed novel approaches for handling multimodal data sources"
         ],
         "tools": [
-            "Deep Learning",
-            "Research",
-            "PyTorch",
-            "Multimodal AI"
+            "Multimodal Deep Learning",
+            "Research"
         ]
     },
     {
         "company": "Intelligent Systems Lab",
         "role": "Machine Learning Engineer",
         "period": "2017–2018",
-        "outcome": "AR pose estimation & computer vision",
+        "outcome": "AR Pose Estimation & Computer Vision",
         "logo": "/images/isl-logo.png",
         "highlights": [
-            "Built pose estimation models for augmented reality applications",
-            "Developed real-time tracking systems for mobile AR"
+            "Built pose estimation models for augmented reality applications"
         ],
         "tools": [
             "Computer Vision",
             "AR Development",
             "Deep Learning",
-            "Mobile ML"
+            "Tensorflow.js"
         ]
     }
 ]

@@ -7,35 +7,39 @@
         "outcome": "",
         "logo": "/images/uottawa-logo.png",
         "highlights": [
-            "Designed and delivered curriculum on modern software engineering practices",
-            "Integrated AI/ML concepts into software development coursework",
-            "Mentored students on real-world projects and industry best practices"
+            "Delivered the Data Structures & Algorithms (CSI 2110) course, revamping lecture slides, laboratory exercises, and tutorial material to strengthen conceptual understanding and practical skills.",
+            "Managed full course operations, including assignment and exam design, grading, and ongoing mentorship to support student learning and performance."
         ]
     },
     {
         "role": "Teaching Assistant",
         "course": "Computer Science Courses",
         "institution": "University of Ottawa",
-        "year": "2018–2022",
+        "year": "2018–2024",
         "outcome": "",
         "logo": "/images/uottawa-logo.png",
         "highlights": [
-            "Assisted in teaching various computer science courses",
-            "Held office hours and provided one-on-one student support",
-            "Graded assignments and provided detailed feedback"
+            "Delivered bilingual instruction (English & French) for labs, office hours, and grading across core CS and Software Engineering courses.",
+            "Led course content creation, slide design, and development of new lab materials for the Modern Software Engineering Practices course."
+        ],
+        "courses": [
+            "CSI 2510 Data Structures and Algorithms",
+            "CSI 2772 Advanced Topics in C++",
+            "CSI 2520/2120 Programming Paradigms (English/French)",
+            "ITI 1100 Digital Systems",
+            "SEG 4300 Modern Software Engineering Practices"
         ]
     },
     {
         "role": "Instructor",
-        "course": "Computer Vision",
+        "course": "Computer Vision Course",
         "institution": "ITI Egypt",
         "year": "2019",
         "outcome": "",
         "logo": "/images/iti-logo.jpg",
         "highlights": [
-            "Taught intensive computer vision course to industry professionals",
-            "Covered deep learning for CV applications and practical implementation",
-            "Guided students through hands-on projects and real-world applications"
+            "Developed and taught a computer vision course for graduate students.",
+            "Covered deep learning applications and guided students through hands-on projects."
         ]
     }
 ]
