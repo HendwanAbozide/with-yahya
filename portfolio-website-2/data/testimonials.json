@@ -331,5 +331,27 @@
         "dateSort": "2024-07-06",
         "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=MH&backgroundColor=3b82f6",
         "link": "https://topmate.io/yahya_alaa#testimonials"
+    },
+    {
+        "id": "30",
+        "type": "adplist",
+        "rating": 5,
+        "text": "Yahya is incredibly kind and detail-oriented. He listens closely to my career concerns and gives very practical advice. He explains interview preparation clearly, including expectations, requirements, and the step-by-step process. He also encourages me to book more mentoring sessions whenever I need. I’m really happy to have him as a mentor.",
+        "name": "Fajar Muhammad",
+        "date": "20th Dec, 2025",
+        "dateSort": "2025-12-20",
+        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=FM&backgroundColor=3b82f6",
+        "link": "https://adplist.org/mentors/yahya-alaa"
+    },
+    {
+        "id": "31",
+        "type": "adplist",
+        "rating": 5,
+        "text": "Yahya is an incredible mentor who perfectly bridges the gap between 'Product/Founder' thinking and 'Hard Engineering.' As someone transitioning from a commercial background (VC) to AI Engineering, I was looking for a clear roadmap, and Yahya delivered exactly that. He even provided a curated reading list and specific tools to master. If you want a mentor who will give you the unvarnished truth and an actionable plan to hit it, book a session with Yahya.",
+        "name": "Polly Goujard",
+        "date": "21st Dec, 2025",
+        "dateSort": "2025-12-21",
+        "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=PG&backgroundColor=3b82f6",
+        "link": "https://adplist.org/mentors/yahya-alaa"
     }
 ]

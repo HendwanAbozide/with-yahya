@@ -1,18 +1,18 @@
 [
     {
-        "value": 63,
+        "value": 65,
         "suffix": "+",
         "label": "Bookings",
         "icon": "Calendar"
     },
     {
-        "value": 27,
+        "value": 30,
         "suffix": "+",
         "label": "Reviews",
         "icon": "MessageCircle"
     },
     {
-        "value": 2540,
+        "value": 2925,
         "suffix": "+",
         "label": "Minutes",
         "icon": "Clock"

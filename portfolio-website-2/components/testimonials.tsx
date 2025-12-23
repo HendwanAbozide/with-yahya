@@ -12,7 +12,9 @@ import { TestimonialColumn } from "@/components/testimonial-column"
 
 const inter = Inter({ subsets: ["latin"] })
 
-const testimonials = testimonialsData
+const testimonials = [...testimonialsData].sort((a, b) =>
+  new Date(b.dateSort).getTime() - new Date(a.dateSort).getTime()
+)
 
 const iconMap: Record<string, LucideIcon> = {
   Calendar,
@@ -63,10 +65,10 @@ function AnimatedCounter({ end, duration = 2500, suffix = "" }: { end: number; d
 }
 
 export function Testimonials() {
-  // Split testimonials into 3 columns
-  const column1 = testimonials.slice(0, 10)
-  const column2 = testimonials.slice(10, 20)
-  const column3 = testimonials.slice(20)
+  // Distribute testimonials row-by-row (round-robin) across 3 columns
+  const column1 = testimonials.filter((_, i) => i % 3 === 0)
+  const column2 = testimonials.filter((_, i) => i % 3 === 1)
+  const column3 = testimonials.filter((_, i) => i % 3 === 2)
 
   return (
     <section id="testimonials" className="py-24 px-6 overflow-hidden bg-secondary/20">
